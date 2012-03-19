@@ -1,6 +1,3 @@
-## set working directory and define data files
-#setwd("/home/corne/Documents/Master-Thesis/R/r/");
-
 ## function to check whether required packages are installed
 is.installed <- function(mypkg) is.element(mypkg, installed.packages()[,1]); 
 
@@ -16,12 +13,11 @@ if (!is.installed('chron'))
 library("ror");
 library("sampling");
 library("chron");
-library("MASS");
 
 file_GA <- "OptionA_nsgaii.txt";
 
 ### Read arguments
-n <- 5 # if not specified as argument, use 
+n <- 1 # if not specified as argument, use 
 args <- commandArgs(trailingOnly = TRUE)
 if (length(args) == 1) {
   n = as.integer(args[1])
@@ -100,7 +96,7 @@ for(j in 1:length(sample_size)){
 }
 
 print(results)
-write.matrix(results, file="results_small.csv", sep=";", 1024);
+#write.matrix(results, file="results_small.csv", sep=";", 1024);
 
 #cat('',file="output_large.txt");
 sample_large <- c(80, 100, 120, 140, 160, 180, 200);
@@ -118,6 +114,6 @@ for (i in 1:length(sample_large)){
 
 
 print(results)
-write.matrix(results, file="results_large.csv", sep=";", 1024);
+#write.matrix(results, file="results_large.csv", sep=";", 1024);
 
 
