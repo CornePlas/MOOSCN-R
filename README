@@ -1,3 +1,6 @@
-This script file is part of my master thesis. It assesses the computation time 
+The R-script file is part of my master thesis. It assesses the computation time 
 and amount of preference statements required for a UTA^GMS preference model in
 Green Logistics. 
+
+see also https://github.com/corneplas/mooscn for the implementation and 
+optimization of the supply chain design.
